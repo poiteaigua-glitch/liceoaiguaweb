@@ -1,15 +1,17 @@
 {
     "entrada": {
         "titulo": "prueba",
-"sub-titulo":"pruebita",
+        "sub-titulo": "pruebita",
         "fecha": "14/08/2015",
-       "entradilla":"tralaleando",
- "cuerpo": "tralalero tralala",
-"foto":"kfkfokeokekfo.jpg",
-"pieFoto":"tremenda foto",
-"clasificacion":"institucional",
-"autor":"Poite",
-"tags":[
-"prueba","probando"]
-}
+        "entradilla": "tralaleando",
+        "cuerpo": "tralalero tralala",
+        "foto": "kfkfokeokekfo.jpg",
+        "pieFoto": "tremenda foto",
+        "clasificacion": "institucional",
+        "autor": "Poite",
+        "tags": [
+            "prueba",
+            "probando"
+        ]
+    }
 }

@@ -1,3 +1,50 @@
+localStorage.setItem("fuente",0);
+const fuentes = ['Arial, 	Copperplate,Lucida Handwriting'];
+
+async function readJSONFile(filePath) {
+    try {
+        // Fetch the JSON file
+        const response = await fetch(filePath);
+        
+        // Check if the fetch was successful
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        // Parse the JSON content
+        const data = await response.json();
+        
+        // Log the data to the console (or use it as needed)
+        console.log(data);
+        
+        // Return the data for further use
+        return data;
+    } catch (error) {
+        console.error('Error reading JSON file:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const entradas = await readJSONFile('entradas.json');
+    // Aquí puedes usar los datos del JSON como necesites
+    console.log('Datos cargados:', entradas);
+});
+
+function intercalarFuente() {
+    const fuenteActual = document.body.style.fontFamily;
+    if (fuenteActual === fuentes[0]) {
+        cambiarFuente(fuentes[1]);
+    } else if (fuenteActual === fuentes[1]) {
+        cambiarFuente(fuentes[2]);
+    } else {
+        cambiarFuente(fuentes[0]);              
+    }
+}
+function cambiarFuente(nombreFuente) {
+  document.body.style.fontFamily = nombreFuente;
+}
+
+
 // ============ HAMBURGER MENU TOGGLE ============
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
@@ -91,3 +138,4 @@ document.addEventListener('click', (e) => {
         navMenu.classList.remove('active');
     }
 });
+
