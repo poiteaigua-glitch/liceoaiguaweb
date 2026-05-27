@@ -1,5 +1,5 @@
-localStorage.setItem("fuente",0);
-const fuentes = ['Arial, 	Copperplate,Lucida Handwriting'];
+let fuentesIndex = 0;
+const fuentes = ['Arial', 	'Copperplate', 'Lucida Handwriting'];
 
 async function readJSONFile(filePath) {
     try {
@@ -28,16 +28,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     const entradas = await readJSONFile('entradas.json');
     // Aquí puedes usar los datos del JSON como necesites
     console.log('Datos cargados:', entradas);
+    inicializar();
 });
+
+function inicializar() {
+    const cargador = `<div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Excelencia Académica</h3>
+                    <p>Programas educativos de alta calidad</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Excelencia Académica</h3>
+                    <p>Programas educativos de alta calidad</p>
+                </div>`;
+    cargar(cargador);
+}
+
+function cargar(cargador) {
+    document.getElementById('noticias').innerHTML = cargador;
+}
 
 function intercalarFuente() {
     const fuenteActual = document.body.style.fontFamily;
-    if (fuenteActual === fuentes[0]) {
+    if (fuentesIndex === 0) {
         cambiarFuente(fuentes[1]);
-    } else if (fuenteActual === fuentes[1]) {
+        fuentesIndex=1;
+    } else if (fuentesIndex === 1) {
         cambiarFuente(fuentes[2]);
+        fuentesIndex=2;
     } else {
-        cambiarFuente(fuentes[0]);              
+        cambiarFuente(fuentes[0]);  
+        fuentesIndex=0;            
     }
 }
 function cambiarFuente(nombreFuente) {
