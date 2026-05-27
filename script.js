@@ -28,8 +28,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     const entradas = await readJSONFile('entradas.json');
     // Aquí puedes usar los datos del JSON como necesites
     console.log('Datos cargados:', entradas);
-    inicializar();
+    //inicializar();
+
 });
+
+function cargarNoticias(entradas) {
+    let cargador = '';
+    for (const key in entradas) {
+        if (entradas.hasOwnProperty(key)) {
+            const entrada = entradas[key];
+            cargador += `<div class="feature-card">
+                            <i class="fas fa-book"></i>
+                            <h3>${entrada.titulo}</h3>
+                            <p>${entrada['sub-titulo']}</p>
+                            <p>${entrada.fecha}</p>
+                        </div>`;
+        }    }
+    cargar(cargador);
+}
 
 function inicializar() {
     const cargador = `<div class="feature-card">
