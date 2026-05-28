@@ -37,7 +37,7 @@ function cargarNotificaciones(entradas) {
     let indice = 0;
     
     for (const key in entradas) {
-        if(indece <=6){
+        if(indice <=6){
              if (entradas.hasOwnProperty(key)) {
             const entrada = entradas[key];
             cargador += `<div class="feature-card">
