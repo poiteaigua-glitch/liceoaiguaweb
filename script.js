@@ -1,5 +1,6 @@
 let fuentesIndex = 0;
 const fuentes = ['Arial', 	'Copperplate', 'Lucida Handwriting'];
+let indiceEntradas = 0;
 
 async function readJSONFile(filePath) {
     try {
@@ -33,10 +34,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 });
 
-function cargarNoticias(entradas) {
+function cargarNotificaciones(entradas) {
     let cargador = '';
+    let indice = 0;
+    
     for (const key in entradas) {
-        if (entradas.hasOwnProperty(key)) {
+        if(indece <=6){
+             if (entradas.hasOwnProperty(key)) {
             const entrada = entradas[key];
             cargador += `<div class="feature-card">
                             <i class="fas fa-book"></i>
@@ -46,7 +50,11 @@ function cargarNoticias(entradas) {
                             <p>${entrada.entradilla}</p>
                             <p>${entrada.autor}</p>
                         </div>`;
-        }    }
+        } 
+        }  
+
+            indice++;
+          }
     cargar(cargador);
 }
 
@@ -65,7 +73,7 @@ function inicializar() {
 }
 
 function cargar(cargador) {
-    document.getElementById('noticias').innerHTML = cargador;
+    document.getElementById('notificaciones').innerHTML = cargador;
 }
 
 function intercalarFuente() {
