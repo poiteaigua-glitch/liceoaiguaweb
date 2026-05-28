@@ -41,8 +41,10 @@ function cargarNoticias(entradas) {
             cargador += `<div class="feature-card">
                             <i class="fas fa-book"></i>
                             <h3>${entrada.titulo}</h3>
-                            <p>${entrada['sub-titulo']}</p>
                             <p>${entrada.fecha}</p>
+                            <p>${entrada['sub-titulo']}</p>
+                            <p>${entrada.entradilla}</p>
+                            <p>${entrada.autor}</p>
                         </div>`;
         }    }
     cargar(cargador);
