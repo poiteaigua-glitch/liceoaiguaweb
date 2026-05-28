@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const entradas = await readJSONFile('entradas.json');
     // Aquí puedes usar los datos del JSON como necesites
     console.log('Datos cargados:', entradas);
-    cargarNoticias(entradas);
+    cargarNotificaciones(entradas);
     //inicializar();
 
 });
