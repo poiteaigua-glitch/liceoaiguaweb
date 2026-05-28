@@ -52,7 +52,7 @@ function cargarNotificaciones(entradas) {
         }  
 
             indice++;
-          }
+        }
     cargar(cargador);
 }
 
