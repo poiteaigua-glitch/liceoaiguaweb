@@ -131,7 +131,7 @@ body {
 /* ============ HERO SECTION ============ */
 .hero {
     /*background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);*/
-    background-image: url("logo viejo corregido.JPG");
+    background-image: url("imagenes/logo viejo corregido.JPG");
     background-size: cover;
 
     color: var(--white);

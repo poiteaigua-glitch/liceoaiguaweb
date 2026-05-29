@@ -24,7 +24,7 @@ async function readJSONFile(filePath) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const entradas = await readJSONFile('entradas.json');
+    const entradas = await readJSONFile('https://poiteaigua-glitch.github.io/persistenciaAigua/entradas.json');
     // Aquí puedes usar los datos del JSON como necesites
     console.log('Datos cargados:', entradas);
     cargarNotificaciones(entradas);
