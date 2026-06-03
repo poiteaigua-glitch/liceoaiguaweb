@@ -47,6 +47,7 @@ function cargarNotificaciones(entradas) {
                             <p>${entrada.entradilla}</p>
                             <p>${entrada['sub-titulo']}</p>
                             <p>${entrada.autor}</p>
+                            <button onclick="leerMas()">Leer más</button>
                         </div>`;
         } 
         }  
@@ -72,4 +73,8 @@ function inicializar() {
 
 function cargar(cargador) {
     document.getElementById('notificaciones').innerHTML = cargador;
+}
+
+function leerMas() {
+    window.location.href = 'noticia.html';
 }
