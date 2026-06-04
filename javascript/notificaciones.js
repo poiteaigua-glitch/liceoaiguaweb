@@ -47,7 +47,7 @@ function cargarNotificaciones(entradas) {
                             <p>${entrada.entradilla}</p>
                             <p>${entrada['sub-titulo']}</p>
                             <p>${entrada.autor}</p>
-                            <button onclick="leerMas()">Leer más</button>
+                            <button onclick="leerMas(${indice})">Leer más</button>
                         </div>`;
         } 
         }  
@@ -75,6 +75,8 @@ function cargar(cargador) {
     document.getElementById('notificaciones').innerHTML = cargador;
 }
 
-function leerMas() {
+function leerMas(i) {
+    localStorage.setItem('noticiaSeleccionada', i);
+    alert('Noticia seleccionada: ' + i);
     window.location.href = 'noticia.html';
 }
