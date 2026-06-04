@@ -49,8 +49,9 @@ function cargarNotificacion(entradas) {
                             <p>${entrada['sub-titulo']}</p>
                             <p>${entrada.fecha}</p>
                             <p>${entrada.entradilla}</p>
-                            <p>${entrada.cuerpo}</p>`;  
-                
+                            <p>${entrada.cuerpo}</p>
+                            <img src="https://poiteaigua-glitch.github.io/persistenciaAigua/${entrada.foto}" alt="Imagen de la noticia">`;  
+
 
                             cargador+=`<p>Autor: ${entrada.autor}</p>
                         </div>`;
