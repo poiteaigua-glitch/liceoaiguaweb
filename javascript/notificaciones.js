@@ -77,6 +77,5 @@ function cargar(cargador) {
 
 function leerMas(i) {
     localStorage.setItem('noticiaSeleccionada', i);
-    alert('Noticia seleccionada: ' + i);
     window.location.href = 'noticia.html';
 }
