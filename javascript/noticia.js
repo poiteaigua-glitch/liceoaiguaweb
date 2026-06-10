@@ -50,10 +50,22 @@ function cargarNotificacion(entradas) {
                             <p>${entrada.fecha}</p>
                             <p>${entrada.entradilla}</p>
                             <p>${entrada.cuerpo}</p>
-                            <img src="https://poiteaigua-glitch.github.io/persistenciaAigua/${entrada.foto}" alt="Imagen de la noticia">`;  
+                            <div class="gallery">
+                            `;
+                            console.log("hola");  
+                for (const imagen of entrada.foto){
+                    
+                    cargador+=`
+                                <div class="gallery-item">
+                                    <a target="_blank" href="https://poiteaigua-glitch.github.io/persistenciaAigua/${imagen}">
+                                        <img src="https://poiteaigua-glitch.github.io/persistenciaAigua/${imagen}" alt="Forest" width="600" height="400">
+                                    </a>
+                                    
+                                </div>`;
+                }  
 
-
-                            cargador+=`<p>Autor: ${entrada.autor}</p>
+                            cargador+=`</div>
+                            <p>Autor: ${entrada.autor}</p>
                         </div>`;
         } 
         }  
